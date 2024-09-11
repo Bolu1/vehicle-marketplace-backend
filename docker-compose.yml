@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  app:
+    container_name: vehicle_listing_backend
+    build: .
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      PORT: ${PORT}
+      DB_USER: ${DATABASE_USER}
+      DB_PASSWORD: ${DATABASE_PASSWORD}
+      DB_NAME: ${DATABASE_NAME}
+      DB_PORT: ${DATABASE_PORT}
+      DB_HOST: ${DATABASE_HOST}
